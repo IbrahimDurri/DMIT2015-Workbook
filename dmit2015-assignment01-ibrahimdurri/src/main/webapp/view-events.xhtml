@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:p="primefaces">
+
+<h:head>
+    <title>View Events</title>
+</h:head>
+
+<h:body>
+
+    <h2>DMIT2015-1261 Assignment 1 by Ibrahim Durri</h2>
+
+    <p:messages />
+
+    <p:dataTable value="#{campusEventBean.events}" var="event">
+
+        <p:column headerText="Event ID">
+            <h:outputText value="#{event.eventId}" />
+        </p:column>
+
+        <p:column headerText="Event Name">
+            <h:outputText value="#{event.eventName}" />
+        </p:column>
+
+        <p:column headerText="Organizer Name">
+            <h:outputText value="#{event.organizerName}" />
+        </p:column>
+
+        <p:column headerText="Event Date">
+            <h:outputText value="#{event.eventDate}" />
+        </p:column>
+
+        <p:column headerText="Capacity">
+            <h:outputText value="#{event.capacity}" />
+        </p:column>
+
+        <p:column headerText="Summary">
+            <h:outputText value="#{event.eventSummary}" />
+        </p:column>
+
+    </p:dataTable>
+
+    <br />
+
+    <h:link value="Create Event" outcome="create-event" />
+
+</h:body>
+</html>
